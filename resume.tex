@@ -22,118 +22,116 @@
 \urlstyle{same}
 
 \newcommand\textbox[1]{%
-    \parbox{.333\textwidth}{#1}%
+  \parbox{.333\textwidth}{#1}%
 }
 
 
 \begin{document}
 
 {\centering
-    {\huge \scshape {Jason Han}}
-    \textbox{\href{mailto:jjhan@vassar.edu}
-                  {jjhan@vassar.edu}\hfill}%
-    \textbox{\hfil \small (347)-687-3687\hfil}%
-    \textbox{\hfill \href{https://www.linkedin.com/in/jasonjhan/}
-                         {linkedin.com/in/jasonjhan}}\par
+  \textbox{\href{mailto:jjhan@vassar.edu}{jjhan@vassar.edu}}%
+  \hfill {\huge \scshape {Jason Han}} \hfill%
+  \textbox{\hfill \href{https://www.linkedin.com/in/jasonjhan/}
+    {linkedin.com/in/jasonjhan}}\par
 }
 
 \vspace{-0.5em}
 \hrulefill
 
 \begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-    {\color{Red} \textbf{\textsc{Education}}}
+  {\color{Red} \textbf{\textsc{Education}}}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-    \vspace{-1pt}
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{Vassar College} &
-        {\small Poughkeepsie, NY}\\
-        \textsl{\small B.A. Computer Science and Math} &
-        {\small Expected: May 2023}
-    \end{tabular*}
-    \begin{itemize}
-        \item Parallel Programming, Operating Systems, Compilers, Databases
-        \item Multivariable Calculus, Linear Algebra, Probability
-    \end{itemize}
+  \vspace{-1pt}
+  \resumeheading{Vassar College}{May 2023}{B.A. Computer Science and Math}
+    {Poughkeepsie, NY}
+  \begin{itemize}
+    \item Parallel Programming, Operating Systems, Compilers, Databases
+    \item Multivariable Calculus, Linear Algebra, Probability
+  \end{itemize}
 \end{minipage}
 
 \vspace{0.75em}
 {\color{Red} \hrulefill}
 
 \begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-    {\color{Red} \textbf{\textsc{Work\\Experience}}}
+  {\color{Red} \textbf{\textsc{Work\\Experience}}}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-    \resumeheading{IBM}{May 2022 -- Present}{Back End SDE Intern}
+  \resumeheading{IBM}{May 2022 -- Aug 2022}{Back End SDE Intern}{Boston, MA}
+  \begin{itemize}
+    \item Worked on the Watson Assistant Store team using JavaScript (Node.js),
+      Kubernetes, and IBM Cloud.
+    \item Created a weather bot using Watson Assistant and Watson Natural
+      Language Understanding, hosted on IBM Code Engine.
+    \item Wrote parsers for Actions conditions, context, and output using Ajv
+      schemas.
+    \item Fixed failing Store end-to-end remote tests.
+  \end{itemize}
+  \vspace{0.5em}
+  \resumeheading{Vassar URSI}{June 2021 -- July 2021}
+    {Cognitive Science Researcher}{Poughkeepsie, NY}
+  \begin{itemize}
+    \item Validated the hypothesis that gene duplication and
+      differentiation affects modularity and evolvability using
+      artificial neural networks.
+    \item Created a simulation program in Python and C++ using ROS 2 and Gazebo
+      which simulates biological phenomenon such as genotype to phenotype
+      mappings, neuron/sensor connectivity and weights, and fitness landscapes.
+    \item Ran simulations in parallel using Python in Hopper, a
+      high-performance computing cluster.
+  \end{itemize}
+  \vspace{0.5em}
+  \resumeheading{Google, Inc.}{May 2020 -- Aug 2020}{STEP Intern}{Remote}
+  \begin{itemize}
+    \item Completed the entire web development process including writing design
+      docs, implementation, unit testing, and deployment.
+    \item Worked as a full-stack developer using Java Servlets, JavaScript,
+      HTML, CSS, and JS frameworks.
+    \item \textbf{Restaurant Roulette web app}:
     \begin{itemize}
-        \item Working on the Watson Assistant Store team using JavaScript
-              (Node.js), Kubernetes, and IBM Cloud.
+      \item Used Google App Engine to deploy a web app that uses React and
+        barba.js for the frontend.
+      \item Created a backend using Java Servlets that implements a REST API
+        to be used by the web app, and tested using JUnit and Mockito test
+        suites.
+      \item Integrated with Google Places API, Maps API, and OAuth API, as well
+        as Google Datastore.
     \end{itemize}
-    \vspace{0.5em}
-    \resumeheading{Vassar Undergraduate Research Summer Institute (URSI)}
-                  {June 2021 -- July 2021}{Cognitive Science Researcher}
-    \begin{itemize}
-        \item Validated the hypothesis that gene duplication and
-              differentiation affects modularity and evolvability using
-              artificial neural networks.
-        \item Created a simulation program in Python and C++ using ROS 2 and
-              Gazebo which
-              simulates biological phenomenon such as genotype to phenotype
-              mappings, neuron/sensor connectivity and weights, and fitness
-              landscapes.
-        \item Ran simulations in parallel using Python in Hopper, a high
-              performance computing cluster.
-    \end{itemize}
-    \vspace{0.5em}
-    \resumeheading{Google, Inc.}{May 2020 -- Aug 2020}{STEP Intern}
-    \begin{itemize}
-        \item Completed the entire web development process including writing
-              design docs, implementation, unit testing, and deployment.
-        \item Worked as a full-stack developer using Java Servlets, JavaScript,
-              HTML, CSS, and JS frameworks.
-        \item \textbf{Restaurant Roulette web app}:
-        \begin{itemize}
-            \item Used Google App Engine to deploy a web app that uses React
-                  and barba.js for the frontend.
-            \item Created a backend using Java Servlets that implements a
-                  REST API to be used by the web app, and tested using JUnit
-                  and Mockito test suites.
-            \item Integrated with Google Places API, Maps API, and OAuth API,
-                  as well as Google Datastore.
-        \end{itemize}
-    \end{itemize}
+  \end{itemize}
 \end{minipage}
 
 \vspace{0.75em}
 {\color{Red} \hrulefill}
 
 \begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-    {\color{Red} \textbf{\textsc{Leadership\\and\\Campus\\Activities}}}
+  {\color{Red} \textbf{\textsc{Leadership\\and\\Campus\\Activities}}}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-    \personalheading{VC++ Club}{President}{Feb 2020 -- Present}
-    \personalheading{CS Majors Committee}{Vice President}{May 2022 -- Present}
-    \personalheading{Teaching Assistant}{Compilers}{August 2022 -- Present}
-    \personalheading{Teaching Assistant}{Operating Systems}{Jan 2022 -- May 2022}
-    \phantom{why is this needed to prevent warnings?}
+  \personalheading{VC++ Club}{President}{Feb 2020 -- Present}
+  \personalheading{CS Majors Committee}{Vice President}{May 2022 -- Present}
+  \personalheading{Teaching Assistant}{Compilers}{Aug 2022 -- Present}
+  \personalheading{Teaching Assistant}{Operating Systems}{Jan 2022 -- May 2022}
+  \phantom{why is this needed to prevent warnings?}
 \end{minipage}
 
 \vspace{0.75em}
 {\color{Red} \hrulefill}
 
 \begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-    {\color{Red} \textbf{\textsc{Skills}}}
+  {\color{Red} \textbf{\textsc{Skills}}}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-    \begin{itemize}
-        \item \textbf{Languages}: JavaScript/HTML/CSS, Java, Python, C++, OCaml, SQL
-        \item \textbf{Frameworks}: Node.js
-        \item \textbf{Tools}: Git, Kubernetes, Docker
-    \end{itemize}
+  \begin{itemize}
+    \item \textbf{Languages}: JavaScript/HTML/CSS, Java, Python, C++, OCaml,
+      SQL
+    \item \textbf{Frameworks}: Node.js
+    \item \textbf{Tools}: Git, Docker, Kubernetes
+  \end{itemize}
 \end{minipage}
 
 \end{document}
