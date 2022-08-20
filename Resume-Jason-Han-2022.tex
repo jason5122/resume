@@ -1,136 +1,105 @@
-\documentclass[12pt]{article}
-\usepackage[margin=0.5in]{geometry}
+\documentclass[11pt]{article}
 \pagestyle{empty}
 \raggedright
 
-\input{setup}
+\usepackage{fontspec}
+\setmainfont{Nunito Regular}[
+  BoldFont = Nunito Bold,
+  ItalicFont = Nunito Italic
+]
 
-% Enable bold small caps: https://tex.stackexchange.com/a/386933
-\usepackage{lmodern} % Switch to Latin Modern
-\usepackage[T1]{fontenc}
-\rmfamily
-\DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
-\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
+\usepackage[margin=0.75in]{geometry}
+% \geometry{showframe} % debug use
 
-\usepackage[dvipsnames]{xcolor}
-
-\setlength{\tabcolsep}{0pt}
 \usepackage{enumitem}
-\setlist{leftmargin=*, noitemsep, topsep=0.25em}
+\setlist{leftmargin=*, noitemsep, topsep=0.5em}
 
-\usepackage[hidelinks]{hyperref}
-\urlstyle{same}
+\usepackage{xcolor}
+\definecolor{red}{HTML}{DC3522}
 
-\newcommand\textbox[1]{%
-  \parbox{.333\textwidth}{#1}%
-}
+\makeatletter
+\def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}
+\makeatother
+
+\newenvironment{resumesection}[1]{%
+  {\LARGE \textbf{#1}}\hrulefill\medskip
+}{\vskip 1em}
+
+\newcommand{\resumeentry}[4]{%
+\textbf{#1} \hfill {\small #2}
+\par
+\textcolor{red}{{\small #3}} \hfill {\small #4}}
 
 
 \begin{document}
 
-{\centering
-  \textbox{\href{mailto:jjhan@vassar.edu}{jjhan@vassar.edu}}%
-  \hfill {\huge \scshape {Jason Han}} \hfill%
-  \textbox{\hfill \href{https://www.linkedin.com/in/jasonjhan/}
-    {linkedin.com/in/jasonjhan}}\par
-}
+{\Huge Jason Han \par}
 
-\vspace{-0.5em}
-\hrulefill
+\medskip
 
-\begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-  {\color{Red} \textbf{\textsc{Education}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-  \vspace{-1pt}
-  \resumeheading{Vassar College}{May 2023}{B.A. Computer Science and Math}
-    {Poughkeepsie, NY}
+{jjhan@vassar.edu ~$\vert$~ linkedin.com/in/jasonjhan \par}
+
+\vskip 1em
+
+\begin{resumesection}{Education}
+
+  \resumeentry{Vassar College}{Poughkeepsie, NY}{B.A. in Computer Science and Math}{May 2023}
+
+\end{resumesection}
+
+\begin{resumesection}{Work Experience}
+
+  \resumeentry{IBM}{Boston, MA}{Back End SDE Intern}{May 2022 -- Aug 2022}
   \begin{itemize}
-    \item Parallel Programming, Operating Systems, Compilers, Databases
-    \item Multivariable Calculus, Linear Algebra, Probability
+    \item Worked on the Watson Assistant Store team using Node.js, Kubernetes, and IBM Cloud
+    \item Created a weather bot assistant using Watson Natural Language Understanding and IBM Code Engine
+    \item Improved validation of Actions conditions using Ajv schemas
+    \item Fixed failing Store end-to-end remote tests
   \end{itemize}
-\end{minipage}
 
-\vspace{0.75em}
-{\color{Red} \hrulefill}
+  \vskip 1em
 
-\begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-  {\color{Red} \textbf{\textsc{Work\\Experience}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-  \resumeheading{IBM}{May 2022 -- Aug 2022}{Back End SDE Intern}{Boston, MA}
+  \resumeentry{Vassar URSI}{San Poughkeepsie, NY}{Cognitive Science Researcher}{Jun 2021 -- Jul 2021}
   \begin{itemize}
-    \item Worked on the Watson Assistant Store team using JavaScript (Node.js),
-      Kubernetes, and IBM Cloud.
-    \item Created a weather bot using Watson Assistant and Watson Natural
-      Language Understanding, hosted on IBM Code Engine.
-    \item Improved validation of Actions conditions using Ajv schemas.
-    \item Fixed failing Store end-to-end remote tests.
+    \item Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks
+    \item Created a simulation program in Python and C++ using ROS 2 and Gazebo which simulates biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes
+    \item Ran simulations in parallel using Python in Hopper, a high-performance computing cluster
   \end{itemize}
-  \vspace{0.5em}
-  \resumeheading{Vassar URSI}{Jun 2021 -- Jul 2021}
-    {Cognitive Science Researcher}{Poughkeepsie, NY}
+
+  \vskip 1em
+
+  \resumeentry{Google, Inc.}{NYC (Remote)}{STEP Intern}{May 2020 -- Aug 2020}
   \begin{itemize}
-    \item Validated the hypothesis that gene duplication and
-      differentiation affects modularity and evolvability using
-      artificial neural networks.
-    \item Created a simulation program in Python and C++ using ROS 2 and Gazebo
-      which simulates biological phenomenon such as genotype to phenotype
-      mappings, neuron/sensor connectivity and weights, and fitness landscapes.
-    \item Ran simulations in parallel using Python in Hopper, a
-      high-performance computing cluster.
+    \item Completed the entire web development process including writing design docs, implementation, unit testing, and deployment
+    \item Worked as a full-stack developer using Java Servlets, JavaScript, HTML, CSS, and JS frameworks
+    \item Used Google App Engine to deploy a web app that uses React and barba.js for the frontend
+    \item Created a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites
+    \item Integrated with Google Places API, Maps API, and OAuth API, as well as Google Datastore
   \end{itemize}
-  \vspace{0.5em}
-  \resumeheading{Google, Inc.}{May 2020 -- Aug 2020}{STEP Intern}{Remote}
-  \begin{itemize}
-    \item Completed the entire web development process including writing design
-      docs, implementation, unit testing, and deployment.
-    \item Worked as a full-stack developer using Java Servlets, JavaScript,
-      HTML, CSS, and JS frameworks.
-    \item \textbf{Restaurant Roulette web app}:
-    \begin{itemize}
-      \item Used Google App Engine to deploy a web app that uses React and
-        barba.js for the frontend.
-      \item Created a backend using Java Servlets that implements a REST API
-        to be used by the web app, and tested using JUnit and Mockito test
-        suites.
-      \item Integrated with Google Places API, Maps API, and OAuth API, as well
-        as Google Datastore.
-    \end{itemize}
-  \end{itemize}
-\end{minipage}
 
-\vspace{0.75em}
-{\color{Red} \hrulefill}
+\end{resumesection}
 
-\begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-  {\color{Red} \textbf{\textsc{Leadership\\and\\Campus\\Activities}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
-  \personalheading{VC++ Club}{President}{Feb 2020 -- Present}
-  \personalheading{CS Majors Committee}{Vice President}{May 2022 -- Present}
-  \personalheading{Teaching Assistant}{Compilers}{Aug 2022 -- Present}
-  \personalheading{Teaching Assistant}{Operating Systems}{Jan 2022 -- May 2022}
-  \phantom{why is this needed to prevent warnings?}
-\end{minipage}
+\begin{resumesection}{Leadership and Campus Activities}
+  
+  \textbf{VC++ Club} \textcolor{red}{{\small President}}
 
-\vspace{0.75em}
-{\color{Red} \hrulefill}
+  \textbf{CS Majors Committee} \textcolor{red}{{\small Vice President}}
 
-\begin{minipage}[t]{0.15\textwidth}\vspace{-0.5em}%
-  {\color{Red} \textbf{\textsc{Skills}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.82\textwidth}\vspace{-0.5em}%
+  \textbf{Teaching Assistant} \textcolor{red}{{\small Compilers}}
+
+  \textbf{Teaching Assistant} \textcolor{red}{{\small Operating Systems}}
+
+\end{resumesection}
+
+\begin{resumesection}{Skills}
+
   \textbf{Languages}: JavaScript/HTML/CSS, Java, Python, C++, OCaml,
       SQL
 
   \textbf{Frameworks}: Node.js
   
   \textbf{Tools}: Git, Docker, Kubernetes
-\end{minipage}
+
+\end{resumesection}
 
 \end{document}
