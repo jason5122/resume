@@ -28,38 +28,37 @@
 \newcommand{\resumeentry}[4]{%
 \textbf{#1} \hfill {\small #2}
 \par
-\textcolor{red}{{\small #3}} \hfill {\small #4}}
+{\small #3} \hfill {\small #4}}
 
 
 \begin{document}
 
-{\Huge Jason Han \par}
-
-\medskip
-
-{jjhan@vassar.edu ~$\vert$~ linkedin.com/in/jasonjhan \par}
+{\centering%
+  {\Huge Jason Han \par}
+  \medskip
+  {jjhan@vassar.edu ~$\vert$~ {\small 347-687-3687} ~$\vert$~ linkedin.com/in/jasonjhan \par}}
 
 \vskip 1em
 
 \begin{resumesection}{Education}
 
-  \resumeentry{Vassar College}{Poughkeepsie, NY}{B.A. in Computer Science and Math}{May 2023}
+  \resumeentry{Vassar College}{Poughkeepsie, NY}{B.A. in Computer Science and Math}{Expected May 2023}
 
 \end{resumesection}
 
 \begin{resumesection}{Work Experience}
 
-  \resumeentry{IBM}{Boston, MA}{Back End SDE Intern}{May 2022 -- Aug 2022}
+  \resumeentry{IBM Watson (Data and AI)}{Boston, MA}{Back-End SDE Intern}{May 2022 -- Aug 2022}
   \begin{itemize}
-    \item Worked on the Watson Assistant Store team using Node.js, Kubernetes, and IBM Cloud
-    \item Created a weather bot assistant using Watson Natural Language Understanding and IBM Code Engine
-    \item Improved validation of Actions conditions using Ajv schemas
-    \item Fixed failing Store end-to-end remote tests
+    \item Created a weather bot using IBM Code Engine to demonstrate the features of Watson Assistant and Watson Natural Language Understanding
+    \item Enhanced the error handling feature in Watson Assistant Actions to output more accurate messages
+    \item Fixed hundreds of the team's end-to-end functional test cases
+    \item Created a tool to log auditing tickets for production access
   \end{itemize}
 
   \vskip 1em
 
-  \resumeentry{Vassar URSI}{Poughkeepsie, NY}{Cognitive Science Researcher}{Jun 2021 -- Jul 2021}
+  \resumeentry{Vassar Undergraduate Research Summer Institute}{Poughkeepsie, NY}{Cognitive Science Researcher}{Jun 2021 -- Jul 2021}
   \begin{itemize}
     \item Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks
     \item Created a simulation program in Python and C++ using ROS 2 and Gazebo which simulates biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes
@@ -71,30 +70,28 @@
   \resumeentry{Google, Inc.}{NYC (Remote)}{STEP Intern}{May 2020 -- Aug 2020}
   \begin{itemize}
     \item Completed the entire web development process including writing design docs, implementation, unit testing, and deployment
-    \item Worked as a full-stack developer using Java Servlets, JavaScript, HTML, CSS, and JS frameworks
     \item Used Google App Engine to deploy a web app that uses React and barba.js for the frontend
     \item Created a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites
-    \item Integrated with Google Places API, Maps API, and OAuth API, as well as Google Datastore
+    \item Integrated Google Places API, Maps API, and OAuth API, as well as Google Datastore into the web app
   \end{itemize}
 
 \end{resumesection}
 
-\begin{resumesection}{Leadership and Campus Activities}
+\begin{resumesection}{Campus Activities}
   
-  \textbf{VC++ Club} \textcolor{red}{{\small President}}
+  \textbf{VC++ Club} {\small President}
 
-  \textbf{CS Majors Committee} \textcolor{red}{{\small Vice President}}
+  \textbf{CS Majors Committee} {\small Vice President}
 
-  \textbf{Teaching Assistant} \textcolor{red}{{\small Compilers}}
+  \textbf{Teaching Assistant} {\small Compilers, Operating Systems}
 
-  \textbf{Teaching Assistant} \textcolor{red}{{\small Operating Systems}}
+  \textbf{CIS Info Security Intern} {\small Work Study}
 
 \end{resumesection}
 
-\begin{resumesection}{Skills}
+\begin{resumesection}{Technical Skills}
 
-  \textbf{Languages}: JavaScript/HTML/CSS, Java, Python, C++, OCaml,
-      SQL
+  \textbf{Languages}: JavaScript/HTML/CSS, Java, Python, C++, OCaml, Bash, SQL
 
   \textbf{Frameworks}: Node.js
   
