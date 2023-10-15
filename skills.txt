@@ -1,0 +1,14 @@
+JavaScript
+HTML
+CSS
+Java
+Python
+C++
+OCaml
+Bash
+SQL
+React
+Node.js
+Git
+Docker
+Kubernetes

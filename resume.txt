@@ -1,0 +1,18 @@
+IBM
+Back-End SDE Intern
+• Created a weather bot using IBM Code Engine to demonstrate the features of Watson Assistant and Watson Natural Language Understanding
+• Enhanced the error handling feature in Watson Assistant Actions to output more accurate messages
+• Fixed hundreds of the team's end-to-end functional test cases
+• Created a tool to log auditing tickets for production access
+
+Undergraduate Research Summer Institute (URSI)
+• Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks
+• Created a simulation program in Python and C++ using ROS 2 and Gazebo which simulates biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes
+• Ran simulations in parallel using Python in Hopper, a high-performance computing cluster
+
+Google, Inc.
+STEP Intern
+• Completed the entire web development process including writing design docs, implementation, unit testing, and deployment
+• Used Google App Engine to deploy a web app that uses React and barba.js for the frontend
+• Created a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites
+• Integrated Google Places API, Maps API, and OAuth API, as well as Google Datastore into the web app
