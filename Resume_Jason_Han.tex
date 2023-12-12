@@ -12,10 +12,7 @@
 % \geometry{showframe} % debug use
 
 \usepackage{enumitem}
-\setlist{leftmargin=*, noitemsep, topsep=0.5em}
-
-\usepackage{xcolor}
-\definecolor{red}{HTML}{DC3522}
+\setlist{noitemsep, topsep=0.25em}
 
 \makeatletter
 \def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}
@@ -23,6 +20,7 @@
 
 \newenvironment{resumesection}[1]{%
   {\LARGE \textbf{#1}}\hrulefill\medskip
+
 }{\vskip 1em}
 
 \newcommand{\resumeentry}[4]{%
@@ -40,15 +38,8 @@
 
 \vskip 1em
 
-\begin{resumesection}{Technical Skills}
-
-  \resumeentry{Vassar College}{Poughkeepsie, NY}{B.A. in Computer Science and Math}{May 2023}
-
-\end{resumesection}
-
-\begin{resumesection}{Work Experience}
-
-  \resumeentry{IBM Watson}{Boston, MA}{Back-End SDE Intern}{May 2022 -- Aug 2022}
+\begin{resumesection}{Experience}
+  \resumeentry{IBM Watson}{May 2022 -- Aug 2022}{Back-End SDE Intern}{Boston, MA}
   \begin{itemize}
     \item Created a weather bot using IBM Code Engine to demonstrate the features of Watson Assistant and Watson Natural Language Understanding
     \item Enhanced the error handling feature in Watson Assistant Actions to output more accurate messages
@@ -56,41 +47,48 @@
     \item Created a tool to log auditing tickets for production access
   \end{itemize}
 
-  \vskip 1em
+  \vskip 0.5em
 
-  \resumeentry{Vassar College}{Poughkeepsie, NY}{Undergraduate Research Summer Institute (URSI)}{Jun 2021 -- Jul 2021}
+  \resumeentry{Vassar College}{Jun 2021 -- Jul 2021}{Undergraduate Research Summer Institute (URSI)}{Poughkeepsie, NY}
   \begin{itemize}
-    \item Created a simulation program in Python and C++ for evo-devo robotics research
+    \item Created a simulation program in ROS 2 using Python and C++ for evo-devo robotics research
+    \item Simulated biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes
   \end{itemize}
 
-  \vskip 1em
+  \vskip 0.5em
 
-  \resumeentry{Google, Inc.}{NYC (Virtual)}{STEP Intern}{May 2020 -- Aug 2020}
+  \resumeentry{Google, Inc.}{May 2020 -- Aug 2020}{STEP Intern}{NYC (Virtual)}
   \begin{itemize}
     \item Completed the entire web development process including writing design docs, implementation, unit testing, and deployment
     \item Used Google App Engine to deploy a web app that uses React and barba.js for the frontend
     \item Created a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites
     \item Integrated Google Places API, Maps API, and OAuth API, as well as Google Datastore into the web app
   \end{itemize}
-
 \end{resumesection}
 
-\begin{resumesection}{Campus Activities}
-  
-  \textbf{VC++ Club} {\small President}
+\begin{resumesection}{Projects}
+  \resumeentry{Switcher}{}{Objective-C, C++, Swift}{}
+  \begin{itemize}
+    \item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod adipisicing
+    \item Duis aute irure dolor in reprehenderit in voluptate velit esse and differentiation
+    \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+    \item Link to project: https://github.com/jason5122/switcher
+  \end{itemize}
+\end{resumesection}
 
-  \textbf{CS Majors Committee} {\small Vice President}
+\begin{resumesection}{Technical Skills}
+  \textbf{Programming Languages}: JavaScript, Java, Python, C++, OCaml, Bash, SQL, HTML/CSS
 
-  \textbf{Teaching Assistant} {\small Compilers, Operating Systems}
+  \textbf{Frameworks}: React, Node.js
 
-  \textbf{CIS Info Security Intern} {\small Work Study}
-
+  \textbf{Tools}: Git, Docker, Kubernetes
 \end{resumesection}
 
 \begin{resumesection}{Education}
-
-  \resumeentry{Vassar College}{Poughkeepsie, NY}{B.A. in Computer Science and Math}{May 2023}
-
+  \resumeentry{Vassar College}{May 2023}{B.A. in Computer Science and Math}{Poughkeepsie, NY}
+  \begin{itemize}
+    \item GPA: 3.6/4.0
+  \end{itemize}
 \end{resumesection}
 
 \end{document}
