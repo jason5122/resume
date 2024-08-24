@@ -24,15 +24,15 @@
 \def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}
 \makeatother
 
-\newenvironment{resumesection}[1]{%
-  {\large \textbf{#1}}\hrulefill\smallskip
+\newenvironment{resumesection}[1]{{\large \textbf{#1}}\hrulefill\smallskip\par}
 
-}{}
-
+% https://www.overleaf.com/learn/latex/Tables#Tables_with_a_fixed_width
+\usepackage{array}
 \newcommand{\resumeentry}[4]{%
-\textbf{#1} \hfill {\small #2}
-\par
-{\small #3} \hfill {\small #4}}
+\begin{tabular}{@{}m{0.8\textwidth}l}
+  \textbf{#1} & {\small #2} \\
+  {\small #3} & {\small #4}
+\end{tabular}}
 
 \usepackage[hidelinks]{hyperref}
 
@@ -40,26 +40,25 @@
 \begin{document}
 
 {\centering%
-{\Huge Jason Han \par}
+{\huge Jason Han \par}
 \medskip
 {jason.han@columbia.edu ~$\vert$~ {\small 347-687-3687} ~$\vert$~ \href{https://www.linkedin.com/in/jasonjhan/}{linkedin.com/in/jasonjhan} \par}}
 
-\vskip 0.5em
-
 \begin{resumesection}{Education}
   \resumeentry{Columbia University}{New York, NY}{MS in Computer Science, Machine Learning Track}{Expected Dec 2025}
-
+  {\small Courses: Artificial Intelligence, Computer Vision}
+  \vskip 0.5em
   \resumeentry{Vassar College}{Poughkeepsie, NY}{BA in Computer Science and Mathematics, GPA: 3.6/4.0}{May 2023}
 \end{resumesection}
 
 \vskip 0.5em
 
 \begin{resumesection}{Professional Experience}
+  % TODO: Add more.
   \resumeentry{Diffusive AI}{May 2024 -- Present}{Founding Engineer}{New York, NY}
   \begin{itemize}
     \item Help found an education technology startup that secured a \$400k+ pre-seed round from DataCanvas, one of China's largest AI infrastructure software providers.
     \item Manage the backend REST API for the waitlist handling 1000+ users, hosted on AWS EC2 and RDS.
-    \item TODO: Add more.
   \end{itemize}
 
   \resumeentry{IBM Watson}{May 2022 -- Aug 2022}{Back-End SDE Intern}{Boston, MA}
@@ -70,17 +69,17 @@
     \item Created a Python tool to automate logging auditing tickets for production database access
   \end{itemize}
 
+  % TODO: Remove some.
   \resumeentry{Vassar College}{Jun 2021 -- Jul 2021}{Undergraduate Research Summer Institute (URSI)}{Poughkeepsie, NY}
   \begin{itemize}
-    \item TODO: Remove some.
     \item Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks
     \item Created a simulation program in Python and C++ using ROS 2 and Gazebo which simulates biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes
     \item Ran simulations in parallel using Python in Hopper, a high-performance Linux computing cluster
   \end{itemize}
 
+  % Add metrics! Stretch the truth if you have to.
   \resumeentry{Google, Inc.}{May 2020 -- Aug 2020}{STEP Intern}{New York, NY}
   \begin{itemize}
-    \item TODO: Add metrics! Stretch the truth if you have to.
     \item Completed the entire web development process including writing design docs, implementation, unit testing, and deployment
     \item Used Google Cloud to deploy a fast, responsive web app that supports upwards of 1000+ concurrent users.
     \item Created a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites
@@ -95,9 +94,9 @@
   \par
   {\small \href{https://github.com/jason5122/simple-text}{github.com/jason5122/simple-text}}
   \begin{itemize}
-    \item Created a GPU-accelerated, cross-platform text editor and a custom GUI framework
-    \item Built a custom text rendering engine using Core Text, FreeType, and HarfBuzz, with the rasterization results cached using a glyph atlas
-    \item Profiled performance to ensure redraws happen in <2 milliseconds (500+ FPS)
+    \item Create a GPU-accelerated, cross-platform text editor and a custom GUI framework
+    \item Build a custom text rendering engine using Core Text, FreeType, and HarfBuzz, with the rasterization results cached using a glyph atlas
+    \item Profile performance to ensure redraws happen in <2 milliseconds (500+ FPS)
   \end{itemize}
 \end{resumesection}
 
