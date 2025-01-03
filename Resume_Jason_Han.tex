@@ -8,11 +8,12 @@
 \pagestyle{empty}
 \raggedright
 
-\usepackage{fontspec}
-\setmainfont{Nunito Regular}[
-  BoldFont = Nunito Bold,
-  ItalicFont = Nunito Italic
-]
+% \usepackage{fontspec}
+% \setmainfont{EB Garamond}
+% \setmainfont{Nunito Regular}[
+%   BoldFont = Nunito Bold,
+%   ItalicFont = Nunito Italic
+% ]
 
 \usepackage[margin=0.5in, top=0.5in]{geometry}
 % \geometry{showframe} % debug use
@@ -26,15 +27,13 @@
 
 \newenvironment{resumesection}[1]{{\large \textbf{#1}}\hrulefill\smallskip\par}
 
-% https://www.overleaf.com/learn/latex/Tables#Tables_with_a_fixed_width
-\usepackage{array}
 \newcommand{\resumeentry}[4]{%
-\begin{tabular}{@{}m{0.8\textwidth}l}
-  \textbf{#1} & {\small #2} \\
-  {\small #3} & {\small #4}
-\end{tabular}}
+\textbf{#1} \hfill {\small #2}
+\par
+{\small #3} \hfill {\small #4}}
 
 \usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
 
 
 \begin{document}
@@ -45,28 +44,34 @@
 {jason.han@columbia.edu ~$\vert$~ {\small 347-687-3687} ~$\vert$~ \href{https://www.linkedin.com/in/jasonjhan/}{linkedin.com/in/jasonjhan} \par}}
 
 \begin{resumesection}{Education}
-  \resumeentry{Columbia University}{Expected Dec 2025}{MS in Computer Science, Machine Learning Track}{New York, NY}
-  {\small Courses: Artificial Intelligence, Computer Vision}
+  \resumeentry{Columbia University}{New York, NY}{MS in Computer Science, Machine Learning Track}{Expected Dec 2025}
+
+  {\small Courses: NLP, Cloud Computing, Compilers}
 
   \smallskip
 
-  \resumeentry{Vassar College}{May 2023}{BA in Computer Science and Mathematics, GPA: 3.6/4.0}{Poughkeepsie, NY}
+  \resumeentry{Vassar College}{Poughkeepsie, NY}{BA in Computer Science and Mathematics}{May 2023}
+
+  {\small Courses: Operating Systems, Algorithms, Databases, AI}
 \end{resumesection}
 
 \vskip 0.5em
 
-\begin{resumesection}{Professional Experience}
+\begin{resumesection}{Work Experience}
   % TODO: Add more.
-  \resumeentry{Diffusive AI}{May 2024 -- Present}{Founding Engineer}{New York, NY}
+  \resumeentry{Silo}{New York, NY}{Founding Engineer}{Sep 2024 -- Present}
+
+  {\small \href{https://www.silorepo.com/}{silorepo.com}}
+
   \begin{itemize}
-    \item Help found an education technology startup that secured a \$400k+ pre-seed round from DataCanvas, one of China's largest AI infrastructure software providers.
-    \item Maintain a backend REST API for the waitlist handling 1000+ users, hosted on AWS EC2 and RDS.
-    \item Architect a scalable, performant app backend, designing the database schema, API endpoints, and general system design.
+    \item Create an AI-powered portfolio generator for software developers to showcase their projects succinctly.
+    \item Implement an algorithm using RAG to summarize a source code repository into a project description.
+    \item Expand the platform to Columbia and Duke students, and supporting 100+ daily active users.
   \end{itemize}
 
   \smallskip
 
-  \resumeentry{IBM Watson}{May 2022 -- Aug 2022}{Back-End SDE Intern}{Boston, MA}
+  \resumeentry{IBM}{Boston, MA}{Back-End SDE Intern}{May 2022 -- Aug 2022}
   \begin{itemize}
     \item Created a weather bot hosted on IBM Cloud using the Watson Assistant and Watson Natural Language Understanding API.
     \item Enhanced the error handling feature in Watson Assistant Actions to output detailed error messages.
@@ -77,9 +82,9 @@
   \smallskip
 
   % TODO: Remove some.
-  \resumeentry{Vassar College}{Jun 2021 -- Jul 2021}{Undergraduate Research Summer Institute (URSI)}{Poughkeepsie, NY}
+  \resumeentry{Vassar College}{Poughkeepsie, NY}{Undergraduate Research Summer Institute (URSI)}{Jun 2021 -- Jul 2021}
   \begin{itemize}
-    \item Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks.
+    % \item Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks.
     \item Simulated evolution in Python and C++ using ROS 2, implementing biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes.
     \item Ran simulations in parallel using Python in Hopper, a high-performance Linux computing cluster.
   \end{itemize}
@@ -87,10 +92,10 @@
   \smallskip
 
   % Add metrics! Stretch the truth if you have to.
-  \resumeentry{Google}{May 2020 -- Aug 2020}{STEP Intern}{New York, NY}
+  \resumeentry{Google}{New York, NY}{STEP Intern}{May 2020 -- Aug 2020}
   \begin{itemize}
     \item Completed the entire web development process including writing design docs, implementation, unit testing, and deployment.
-    \item Used Google Cloud Platform (GCP) to deploy a fast, responsive web app that supports upwards of 1000+ concurrent users.
+    \item Leveraged Google Cloud Platform (GCP) to deploy a fast, responsive web app that supports upwards of 1000+ concurrent users.
     \item Designed a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites.
     \item Integrated Google Places API, Maps API, and OAuth API, as well as Google Datastore into the web app.
   \end{itemize}
@@ -104,16 +109,16 @@
   {\small \href{https://github.com/jason5122/simple-text}{github.com/jason5122/simple-text}}
   \begin{itemize}
     \item Architect a GPU-accelerated, cross-platform text editor and a custom GUI framework.
-    \item Build a custom text rendering engine using Core Text, FreeType, and HarfBuzz, with the rasterization results cached using a glyph atlas.
+    \item Build a custom text rendering engine using Core Text, DirectWrite, and Pango, with the rasterization results cached using a glyph atlas.
     \item Profile performance to ensure redraws happen in <2 milliseconds (500+ FPS).
   \end{itemize}
 \end{resumesection}
 
 \vskip 0.5em
 
-\begin{resumesection}{Technical Skills}
+\begin{resumesection}{Skills}
   \begin{tabular}{@{}ll}
-    \textbf{Programming Languages}: & Java, SQL, JavaScript, C++, HTML/CSS, Python, Objective-C, OCaml, Bash \\
+    \textbf{Programming Languages}: & C++, Java, JavaScript, SQL, HTML/CSS, Python, Objective-C, OCaml, Bash \\
     \textbf{Libraries}:             & Node.js, React, OpenGL                                                 \\
     \textbf{Developer Tools}:       & Git, AWS, GCP, Docker, Unix/Linux, CI/CD
   \end{tabular}
