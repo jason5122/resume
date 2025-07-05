@@ -1,39 +1,25 @@
-% Optimize content based on the role.
-% For example, if an employer is looking for Java experience:
-% 1. List Java first in Skills.
-% 2. Ensure we state Java somewhere in Professional Experience.
-% 3. If we have any classes involving Java, list them first in Education::Courses.
-
 \documentclass[11pt]{article}
 \pagestyle{empty}
 \raggedright
 
-% \usepackage{fontspec}
-% \setmainfont{EB Garamond}
-% \setmainfont{Nunito Regular}[
-%   BoldFont = Nunito Bold,
-%   ItalicFont = Nunito Italic
-% ]
-
-\usepackage[margin=0.5in, top=0.5in]{geometry}
-% \geometry{showframe} % debug use
+\usepackage[margin=0.5in]{geometry}
+% \geometry{showframe} % DEBUG: Show page borders.
 
 \usepackage{enumitem}
 \setlist{noitemsep, topsep=0pt}
 
-\makeatletter
-\def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@}
-\makeatother
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
 
-\newenvironment{resumesection}[1]{{\large \textbf{#1}}\hrulefill\smallskip\par}
+\usepackage{titlesec}
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \newcommand{\resumeentry}[4]{%
 \textbf{#1} \hfill {\small #2}
 \par
 {\small #3} \hfill {\small #4}}
-
-\usepackage[hidelinks]{hyperref}
-\hypersetup{colorlinks,urlcolor=blue}
 
 
 \begin{document}
@@ -43,87 +29,80 @@
 \medskip
 {jason.han@columbia.edu ~$\vert$~ {\small 347-687-3687} ~$\vert$~ \href{https://www.linkedin.com/in/jasonjhan/}{linkedin.com/in/jasonjhan} \par}}
 
-\begin{resumesection}{Education}
-  \resumeentry{Columbia University}{New York, NY}{MS in Computer Science, Machine Learning Track}{Expected Dec 2025}
+% Education=========================================================================================
+\section{Education}
+\resumeentry{Columbia University}{New York, NY}{MS in Computer Science, Machine Learning Track (GPA: 3.85/4.0)}{Expected Dec 2025}
 
-  {\small Courses: Natural Language Processing, Cloud Computing, Compilers}
+{\small Courses: Machine Learning, NLP, Neural Networks Deep Learning, Graphics}
 
-  {\small GPA: 3.85/4.0}
+% {\small GPA: 3.85/4.0}
 
-  \smallskip
+\smallskip
 
-  \resumeentry{Vassar College}{Poughkeepsie, NY}{BA in Computer Science and Mathematics}{May 2023}
+\resumeentry{Vassar College}{Poughkeepsie, NY}{BA in Computer Science and Mathematics}{May 2023}
 
-  {\small Courses: Operating Systems, Algorithms, Databases, AI}
-\end{resumesection}
+{\small Courses: Operating Systems, Algorithms, Databases, AI}
+% ==================================================================================================
 
-\vskip 0.5em
+% Work Experience===================================================================================
+\section{Work Experience}
+\resumeentry{Amazon}{Seattle, WA}{SDE Intern}{Jun 2025 -- Aug 2025}
+\begin{itemize}
+  \item Incoming for Summer 2025.
+\end{itemize}
 
-\begin{resumesection}{Work Experience}
-  % TODO: Add more.
-  \resumeentry{Silo}{New York, NY}{Founding Engineer}{Sep 2024 -- Present}
+\smallskip
 
-  {\small \href{https://www.silorepo.com/}{silorepo.com}}
+\resumeentry{Silo}{New York, NY}{Founding Engineer}{Sep 2024 -- Present}
 
-  \begin{itemize}
-    \item Create an AI-powered portfolio generator for software developers to showcase their projects succinctly.
-    \item Implement an algorithm using RAG to summarize a source code repository into a project description.
-    \item Expand the platform to Columbia and Duke students, and supporting 100+ daily active users.
-  \end{itemize}
+{\small \href{https://www.silorepo.com/}{silorepo.com}}
 
-  \smallskip
+\begin{itemize}
+  \item Create an AI-powered portfolio generator for software developers to showcase their projects succinctly.
+  \item Implement an algorithm using RAG to summarize a source code repository into a project description.
+  \item Expand the platform to Columbia and Duke students, and supporting 100+ daily active users.
+\end{itemize}
 
-  \resumeentry{IBM}{Boston, MA}{Back-End SDE Intern}{May 2022 -- Aug 2022}
-  \begin{itemize}
-    \item Created a weather bot hosted on IBM Cloud using the Watson Assistant and Watson Natural Language Understanding API.
-    \item Enhanced the error handling feature in Watson Assistant Actions to output detailed error messages.
-    \item Fixed 200+ backend unit test cases in Node.js and integrated these into the CI/CD pipeline.
-    \item Developed a Python tool to automate logging auditing tickets for production database access.
-  \end{itemize}
+\smallskip
 
-  \smallskip
+\resumeentry{IBM}{Boston, MA}{Backend SDE Intern}{May 2022 -- Aug 2022}
+\begin{itemize}
+  \item Created a weather bot hosted on IBM Cloud using the Watson Assistant and Watson NLU API.
+  \item Enhanced the error handling feature in Watson Assistant Actions to output detailed error messages.
+  \item Fixed 200+ backend unit test cases in Node.js and integrated these into the CI/CD pipeline.
+  \item Developed a Python tool to automate logging auditing tickets for production database access.
+\end{itemize}
 
-  % TODO: Remove some.
-  \resumeentry{Vassar College}{Poughkeepsie, NY}{Undergraduate Research Summer Institute (URSI)}{Jun 2021 -- Jul 2021}
-  \begin{itemize}
-    % \item Validated the hypothesis that gene duplication and differentiation affects modularity and evolvability using artificial neural networks.
-    \item Simulated evolution in Python and C++ using ROS 2, implementing biological phenomenon such as genotype to phenotype mappings, neuron/sensor connectivity and weights, and fitness landscapes.
-    \item Ran simulations in parallel using Python in Hopper, a high-performance Linux computing cluster.
-  \end{itemize}
+\smallskip
 
-  \smallskip
+\resumeentry{Google}{New York, NY}{STEP Intern}{May 2020 -- Aug 2020}
+\begin{itemize}
+  \item Completed the development cycle including writing design docs, testing, and deployment.
+  \item Leveraged Google Cloud Platform (GCP) to deploy a fast, responsive web app that supports upwards of 1000+ concurrent users.
+  \item Designed a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites.
+  \item Integrated Google Places API, Maps API, and OAuth API, as well as Google Datastore into the web app.
+\end{itemize}
+% ==================================================================================================
 
-  % Add metrics! Stretch the truth if you have to.
-  \resumeentry{Google}{New York, NY}{STEP Intern}{May 2020 -- Aug 2020}
-  \begin{itemize}
-    \item Completed the entire web development process including writing design docs, implementation, unit testing, and deployment.
-    \item Leveraged Google Cloud Platform (GCP) to deploy a fast, responsive web app that supports upwards of 1000+ concurrent users.
-    \item Designed a backend using Java Servlets that implements a REST API to be used by the web app, and tested using JUnit and Mockito test suites.
-    \item Integrated Google Places API, Maps API, and OAuth API, as well as Google Datastore into the web app.
-  \end{itemize}
-\end{resumesection}
+% Projects==========================================================================================
+\section{Projects}
+\textbf{Simple Text} $|$ {\small C++, OpenGL, Objective-C} \hfill {\small Oct 2023 -- Present}
+\par
+{\small \href{https://github.com/jason5122/simple-text}{github.com/jason5122/simple-text}}
+\begin{itemize}
+  \item Architect a GPU-accelerated, cross-platform text editor and a custom GUI framework.
+  \item Build a custom text rendering engine using Core Text, DirectWrite, and Pango, with the rasterization results cached using a glyph atlas.
+  \item Profile performance to ensure redraws happen in <2 milliseconds (500+ FPS).
+\end{itemize}
+% ==================================================================================================
 
-\vskip 0.5em
-
-\begin{resumesection}{Projects}
-  \textbf{Simple Text} $|$ {\small C++, OpenGL, Objective-C} \hfill {\small Oct 2023 -- Present}
-  \par
-  {\small \href{https://github.com/jason5122/simple-text}{github.com/jason5122/simple-text}}
-  \begin{itemize}
-    \item Architect a GPU-accelerated, cross-platform text editor and a custom GUI framework.
-    \item Build a custom text rendering engine using Core Text, DirectWrite, and Pango, with the rasterization results cached using a glyph atlas.
-    \item Profile performance to ensure redraws happen in <2 milliseconds (500+ FPS).
-  \end{itemize}
-\end{resumesection}
-
-\vskip 0.5em
-
-\begin{resumesection}{Skills}
-  \begin{tabular}{@{}ll}
-    \textbf{Programming Languages}: & C++, Java, JavaScript, SQL, HTML/CSS, Python, Objective-C, OCaml, Bash \\
-    \textbf{Libraries}:             & Node.js, React, OpenGL                                                 \\
-    \textbf{Developer Tools}:       & Git, AWS, GCP, Docker, Unix/Linux, CI/CD
-  \end{tabular}
-\end{resumesection}
+% Skills============================================================================================
+\section{Skills}
+\begin{tabular}{@{}ll}
+  \textbf{Programming Languages}: & C++, Java, JavaScript, SQL, HTML/CSS, Python, Objective-C, OCaml, Bash \\
+  \textbf{Libraries}:             & Tensorflow, Node.js, React, OpenGL                                     \\
+  \textbf{Developer Tools}:       & Git, AWS, GCP, Spark, Docker, Unix/Linux, CI/CD
+\end{tabular}
+% ==================================================================================================
 
 \end{document}
