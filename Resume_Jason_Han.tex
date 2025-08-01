@@ -6,15 +6,16 @@
 % \geometry{showframe} % DEBUG: Show page borders.
 
 \usepackage{enumitem}
-\setlist{noitemsep, topsep=0pt}
+\setlist{noitemsep, topsep=0pt, left=0pt}
 
 \usepackage[hidelinks]{hyperref}
-\hypersetup{colorlinks,urlcolor=blue}
+
+% Use XCharter (based on Bitstream Charter) font.
+\usepackage{XCharter}
 
 \usepackage{titlesec}
-\titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titlespacing*{\section}{0pt}{0.5em}{0.5em}
+\titleformat{\section}{\scshape\raggedright\large}{}{0pt}{}[\titlerule]
 
 \newcommand{\resumeentry}[4]{%
 \textbf{#1} \hfill {\small #2}
@@ -32,23 +33,27 @@
 % Education=========================================================================================
 \section{Education}
 \resumeentry{Columbia University}{New York, NY}{MS in Computer Science, Machine Learning Track (GPA: 3.85/4.0)}{Expected Dec 2025}
-
-{\small Courses: Machine Learning, NLP, Neural Networks Deep Learning, Graphics}
-
-% {\small GPA: 3.85/4.0}
+\begin{itemize}
+  \item {\small Coursework: Machine Learning, NLP, Neural Networks Deep Learning, Graphics}
+\end{itemize}
 
 \smallskip
 
 \resumeentry{Vassar College}{Poughkeepsie, NY}{BA in Computer Science and Mathematics}{May 2023}
-
-{\small Courses: Operating Systems, Algorithms, Databases, AI}
+\begin{itemize}
+  \item {\small Coursework: Operating Systems, Algorithms, Databases, AI}
+\end{itemize}
 % ==================================================================================================
 
 % Work Experience===================================================================================
 \section{Work Experience}
 \resumeentry{Amazon}{Seattle, WA}{SDE Intern}{Jun 2025 -- Aug 2025}
 \begin{itemize}
-  \item Incoming for Summer 2025.
+  \item \textbf{STAR:} Situation Task Action Result
+  \item \textbf{XYZ:} Accomplished X as measured by Y by doing Z
+  \item \textbf{CAR:} \textbf{C}hallenge \textbf{A}ction \textbf{R}esult
+  \item TODO: Fill this out.
+  \item TODO: Fill this out.
 \end{itemize}
 
 \smallskip
@@ -86,9 +91,8 @@
 
 % Projects==========================================================================================
 \section{Projects}
-\textbf{Simple Text} $|$ {\small C++, OpenGL, Objective-C} \hfill {\small Oct 2023 -- Present}
+\textbf{Simple Text} $|$ {\small C++, OpenGL, Objective-C} \hfill {\small \href{https://github.com/jason5122/simple-text}{github.com/jason5122/simple-text}}
 \par
-{\small \href{https://github.com/jason5122/simple-text}{github.com/jason5122/simple-text}}
 \begin{itemize}
   \item Architect a GPU-accelerated, cross-platform text editor and a custom GUI framework.
   \item Build a custom text rendering engine using Core Text, DirectWrite, and Pango, with the rasterization results cached using a glyph atlas.
